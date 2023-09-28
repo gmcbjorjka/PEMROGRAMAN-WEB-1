@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tag for character encoding -->
     <meta charset="UTF-8" />
+
+    <!-- Meta tag for viewport width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title Website -->
     <title>GoTrav</title>
 
     <!-- External Style Sheet -->
     <link rel="stylesheet" href="./src/css/styles.css" />
 
     <!-- Favicon Web -->
-    <link rel="shortcut icon" href="./src/assets/logo.svg" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./src/assets/logo.svg"
+      type="image/x-icon"
+    />
 
     <!-- Box Icons -->
     <link
@@ -35,18 +44,79 @@
     <meta property="og:image:height" content="500" />
   </head>
   <body>
-        <header id="#header">
-            <nav class="navbar"></nav>
-        </header>
+    <!-- Header Start -->
+    <header id="#header">
+      <nav
+        class="navbar"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div
+          class="nav-brand"
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <img
+            src="./src/assets/logo.svg"
+            alt="logo"
+            width="100"
+            height="100"
+          />
+          <h1>
+            <b>Go<span>Trav</span></b>
+          </h1>
+        </div>
+        <ul
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+          "
+        >
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Service</a></li>
+          <li><a href="#destinations">Destination</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Header End -->
 
-        <section id="hero"></section>
+    <!-- Hero Section Start -->
+    <section id="hero">
+      <div class="hero-img"></div>
+      <div class="content">
+        <h1>Welcome to GoTrav</h1>
+        <p>For your solution to traveling around the world</p>
+      </div>
+    </section>
+    <!-- Hero Section End -->
 
-        <section id="about"></section>
+    <!-- About Section Start -->
+    <section id="about"></section>
+    <!-- About Section End -->
 
-        <section id="services"></section>
+    <!-- Services Section Start -->
+    <section id="services"></section>
+    <!-- Services Section End -->
 
-        <section id="contact"></section>
+    <!-- Destinations Section Start -->
+    <section id="destinations"></section>
+    <!-- Destinations Section end -->
 
-        <footer id="footer"></footer>
+    <!-- Contact Section Start -->
+    <section id="contact"></section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Start -->
+    <footer id="footer"></footer>
+    <!-- Footer End -->
+
+    <!-- Javascript External Files -->
+    <script src="./src/js/index.js"></script>
   </body>
 </html>
