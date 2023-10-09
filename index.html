@@ -1,216 +1,548 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta tag for Character Encoding -->
-    <meta charset="UTF-8" />
-    
-    <!-- Meta tag for viewport width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Title Website -->
-    <title>GoTrav</title>
-
-    <!-- Favicon Web -->
-    <link rel="shortcut icon" href="./src/assets/logo.svg" type="image/x-icon" />
-
-    <!-- Box Icons -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- Meta Tag Open Graph -->
-    <meta property="og:title" content="GoTrav" />
-    <meta
-      property="og:description"
-      content="Website penyedia layanan booking tempat penginapan dan juga akomodasi untuk traveling dan jalan-jalan."
-    />
-    <meta
-      property="og:image"
-      itemprop="image"
-      content="https://karmint26.github.io/go-trav/src/assets/preview.png"
-    />
-    <meta property="og:url" content="https://karmint26.github.io/go-trav" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="500" />
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingkungan</title>
     <style>
-      table {
+        /* Reset CSS */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #calendar {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        /* Warna untuk hari Minggu */
+        td:nth-child(1) {
+            background-color: #FF5733;
+        }
+
+        /* Warna untuk hari Senin */
+        td:nth-child(2) {
+            background-color: #FFD700;
+        }
+
+        /* Warna untuk hari Selasa */
+        td:nth-child(3) {
+            background-color: #87CEEB;
+        }
+
+        /* Warna untuk hari Rabu */
+        td:nth-child(4) {
+            background-color: #98FB98;
+        }
+
+        /* Warna untuk hari Kamis */
+        td:nth-child(5) {
+            background-color: #FF69B4;
+        }
+
+        /* Warna untuk hari Jumat */
+        td:nth-child(6) {
+            background-color: #DDA0DD;
+        }
+
+        /* Warna untuk hari Sabtu */
+        td:nth-child(7) {
+            background-color: #7B68EE;
+        }
+
+        #environment table {
+        width: 100%;
         border-collapse: collapse;
-        width: 600px;
-        border: 1px solid #000;
-        text-align: center;
-        padding: 2rem;
-        margin: 5rem auto;
-      }
-      table thead {
-        background-color: skyblue;
-      }
-      form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 5rem auto;
-      }
-      form .field {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-      }
-      form .field input,
-      form .field textarea,
-      form .field select {
-        padding: 1rem 2rem;
-        border-radius: 1rem;
-        border: .5px solid gray;
-        outline: none;
-        align-self: flex-start;
-      }
-      form button {
-        padding: 1rem 2rem;
-        border-radius: 1rem;
-        color: #fff;
-        background-color: rgb(168, 0, 168);
-        border: none;
-        cursor: pointer;
-      }
-      form
-    </style>
-  </head>
-  <body>
-        <!-- Header Start -->
-    <header id="#header">
-        <nav
-          class="navbar"
-          style="
+        border-spacing: 0;
+        background: linear-gradient(to bottom, #FF5733 30%, #FFD700 30%, #FFD700 55%, #87CEEB 55%, #87CEEB 75%, #98FB98 75%, #98FB98 90%, #FF69B4 90%, #FF69B4 100%);
+        }
+
+        #environment th,
+        #environment td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            color: white;
+        }
+
+        #environment th {
+            background-color: #333;
+            font-weight: bold;
+        }
+
+        #environment tbody tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            padding: 20px;
+            margin-top: 20px; 
+            background-color: #fff; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        ul, ol {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify;
+            margin-left: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        header {
+            background: url('sampul.jpg') center/cover no-repeat;
+            background-size: cover; 
+            color: white;
+            padding: 200px 20px;
+            text-align: center;
+            width: 100%; 
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        nav {
+            background-color: rgba(51, 51, 51, 0.7); 
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
             display: flex;
             justify-content: space-between;
             align-items: center;
-          "
-        >
-          <div
-            class="nav-brand"
-            style="display: flex; justify-content: center; align-items: center"
-          >
-            <img
-              src="./src/assets/logo.svg"
-              alt="logo"
-              width="100"
-              height="100"
-            />
-            <h1>
-              <b>Go<span>Trav</span></b>
-            </h1>
-          </div>
-          <ul
-            style="
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 1rem;
-            "
-          >
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Service</a></li>
-            <li><a href="#destinations">Destination</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <!-- Header End -->
-  
-      <!-- Hero Section Start -->
-      <section id="hero">
-        <div class="hero-img"></div>
-        <div class="content">
-          <h1>Welcome to GoTrav</h1>
-          <p>For your solution to traveling around the world</p>
-        </div>
-      </section>
-      <!-- Hero Section End -->
+            padding: 10px 20px;
+        }
 
-      <!-- Table Section Start -->
-      <table border="1" cellpadding="10" cellspacing="0">
-        <thead>
-          <td>No</td>
-          <td>Kota</td>
-          <td>Negara</td>
-          <td>Biaya</td>
-          <td>Wisata</td>
-        </thead>
-        <tr>
-          <td>1</td>
-          <td>Paris</td>
-          <td>Prancis</td>
-          <td colspan="2" rowspan="2">$25.000</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Bali</td>
-          <td>Indonesia</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Roma</td>
-          <td>Italia</td>
-          <td>$35.000</td>
-          <td>Colosseum</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Beijing</td>
-          <td>China</td>
-          <td>$53.000</td>
-          <td>Tembok China</td>
-        </tr>
-      </table>
-      <!-- Table Section End -->
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-      <!-- Form Section Start -->
-      <form action="/index.html" method="get">
-        <div class="field">
-          <label for="username">Your Name</label>
-          <input type="text" name="username" id="username" placeholder="John Doe">
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .initiatives {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .initiative {
+            width: calc(33.33% - 20px); 
+            margin-bottom: 30px;
+            background-color: #9ac49c; 
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease-in-out; 
+            position: relative; 
+        }
+
+        .initiative:hover {
+            transform: scale(1.05); 
+        }
+
+        img.logo {
+            max-width: 50px; 
+        }
+
+        
+        .image-scroll {
+            display: flex; 
+            overflow-x: auto; 
+            padding: 20px 0;
+            scroll-behavior: smooth; 
+            width: 100%; 
+            white-space: nowrap; 
+        }
+
+        
+        .image-scroll img {
+            max-width: 200px; 
+            height: auto; 
+            margin-right: 10px;
+            border-radius: 8px;
+            cursor: pointer; 
+        }
+
+        
+        .modal-overlay {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); 
+            z-index: 2;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .modal-img {
+            max-width: 90%;
+            max-height: 90%;
+            cursor: pointer; 
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(51, 51, 51, 0.7); 
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+        input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            padding: 5px 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        .initiative img[src="recycle.png"] {
+            max-width: 50px; 
+            display: block; 
+            margin: auto; 
+            background-color: transparent; 
+        }
+        .initiative img[src="pohon.png"] {
+            max-width: 50px; 
+            display: block; 
+            margin: auto; 
+            background-color: transparent; 
+        }
+        .initiative img[src="pembersih.png"] {
+            max-width: 50px; 
+            display: block;
+            margin: auto; 
+            background-color: transparent; 
+        }
+
+        .initiative h3 {
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: white; 
+            padding: 10px; 
+            text-align: center; 
+            border-radius: 0 0 8px 8px; 
+        }
+        .initiative h3 {
+            text-align: center; 
+        }
+        p {
+            text-align: justify;
+        }
+        #comment {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#comment h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#comment form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#comment label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#comment input[type="text"],
+#comment textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#comment textarea {
+    height: 150px;
+}
+
+#comment button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+        
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="logo.png" alt="Logo" class="logo">
         </div>
-        <div class="field">
-          <label for="select-field">choose country</label>
-          <select name="select-field" id="select-field">
-            <option value="China">China</option>
-            <option value="France">France</option>
-            <option value="Indonesia">Indonesia</option>
-            <option value="Netherland">Netherland</option>
-          </select>
+        <ul>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#initiatives">Program dan Inisiatif</a></li>
+            <li><a href="#contact">Hubungi Kami</a></li>
+        </ul>
+        <div>
+            <input type="text" placeholder="Cari...">
+            <button type="submit">Cari</button>
         </div>
-        <div class="field">
-          <label for="text-area">Your Message</label>
-          <textarea name="your-message" id="text-area" cols="30" rows="10" placeholder="Message"></textarea>
+    </nav>
+
+    <header>
+        <h1>Selamat Datang di Tema Lingkungan</h1>
+    </header>
+    <section id="environment">
+        <h1><strong>Lingkungan Hidup</strong></h1>
+
+        <p>Lingkungan hidup adalah segala sesuatu yang ada di sekitar manusia dan berhubungan timbal balik. Lingkungan hidup adalah sistem yang merupakan kesatuan ruang antara makhluk hidup dan komponen abiotik lainnya. Interaksi antar lingkungan alamiah dan sekitarnya membentuk sistem ekologi (ekosistem). Lingkungan memegang peranan sebagai habitat bagi kehidupan makhluk hidup di muka bumi.</p>
+        <img src="main1.jpg" alt="Lingkungan Hidup">
+        <p>Komponen-komponen lingkungan hidup terdiri dari dua jenis, yaitu:</p>
+        <ul>
+            <li>Komponen biotik, makhluk hidup yang meliputi hewan, tumbuhan, dan manusia.</li>
+            <li>Komponen abiotik adalah benda-benda tak hidup, antara lain air, tanah, batu, udara, dan cahaya matahari.</li>
+        </ul>
+        <p>Semua komponen yang berada di dalam lingkungan hidup merupakan satu kesatuan yang tidak dapat dipisahkan dan membentuk sistem kehidupan yang disebut ekosistem. Ekosistem yang merupakan bagian utama dari lingkungan hidup, adalah lingkungan yang sangat dinamis, karena banyaknya komponen yang terlibat di dalamnya. Jika salah satu komponen tersebut berubah maka sistem adaptasi dari organisme yang ada untuk menjaga keseimbangan akan mengalami perubahan. Karena ekosistem merupakan pusat segala aktivitas yang menyediakan sumber makanan dan kebutuhan lain bagi makhluk hidup maka keseimbangan komponen di dalamnya harus dijaga dengan baik.</p>
+        <p>Keseimbangan lingkungan secara alami dapat berlangsung karena beberapa hal, yaitu:</p>
+        <ol>
+            <li>Komponen-komponen yang terlibat dalam aksi-reaksi dan berperan sesuai kondisi keseimbangan.</li>
+            <li>Pemindahan energi (arus energi).</li>
+            <li>Siklus biogeokimia dapat berlangsung.</li>
+        </ol>
+        <p>Keseimbangan lingkungan dapat terganggu jika terjadi perubahan berupa pengurangan fungsi dari komponen atau hilangnya sebagian komponen yang dapat menyebabkan putusnya mata rantai dalam suatu ekosistem. Kondisi keseimbangan tersebut kemungkinan dapat berubah dengan adanya campur tangan manusia dengan segala aktivitas pemenuhan kebutuhan yang terkadang melampaui batas.</p>
+        <p>Sumber: <a href="https://id.wikipedia.org/wiki/Lingkungan_hidup">https://id.wikipedia.org/wiki/Lingkungan_hidup</a></p>
+    </section>
+
+    <section id="environment">
+        <h2>Laporan Lingkungan</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Faktor Lingkungan</th>
+                    <th>Presentase (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pencemaran Udara</td>
+                    <td>30%</td>
+                </tr>
+                <tr>
+                    <td>Pencemaran Air</td>
+                    <td>25%</td>
+                </tr>
+                <tr>
+                    <td>Deforestasi</td>
+                    <td>20%</td>
+                </tr>
+                <tr>
+                    <td>Penggunaan Plastik</td>
+                    <td>15%</td>
+                </tr>
+                <tr>
+                    <td>Pembuangan Limbah</td>
+                    <td>10%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="calendar">
+        <h2>Kalender</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Minggu</th>
+                    <th>Senin</th>
+                    <th>Selasa</th>
+                    <th>Rabu</th>
+                    <th>Kamis</th>
+                    <th>Jumat</th>
+                    <th>Sabtu</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="initiatives">
+        <h2>Program dan Inisiatif</h2>
+        <div class="initiatives">
+            <div class="initiative">
+                <img src="recycle.png" alt="Recycle Icon">
+                <h3>Recycle</h3>
+                <p>Kami mendukung daur ulang dan penggunaan kembali bahan-bahan untuk mengurangi limbah dan polusi lingkungan.</p>
+            </div>
+            <div class="initiative">
+                <img src="pohon.png" alt="Plant Icon">
+                <h3>Pohonkan</h3>
+                <p>Kami melakukan penanaman pohon untuk menjaga ekosistem dan mengurangi emisi karbon.</p>
+            </div>
+            <div class="initiative">
+                <img src="pembersih.png" alt="Clean Icon">
+                <h3>Pembersihan</h3>
+                <p>Kami mengadakan kegiatan membersihkan lingkungan, termasuk pantai, sungai, dan taman.</p>
+            </div>
         </div>
-        <button type="submit">Submit</button>
-      </form>
-      <!-- Form Section End -->
-  
-      <!-- About Section Start -->
-      <section id="about"></section>
-      <!-- About Section End -->
-  
-      <!-- Services Section Start -->
-      <section id="services"></section>
-      <!-- Services Section End -->
-  
-      <!-- Destinations Section Start -->
-      <section id="destinations"></section>
-      <!-- Destinations Section end -->
-  
-      <!-- Contact Section Start -->
-      <section id="contact"></section>
-      <!-- Contact Section End -->
-  
-      <!-- Footer Start -->
-      <footer id="footer"></footer>
-      <!-- Footer End -->  
-  </body>
+    </section>
+
+    <section id="image-scroll">
+        <h2>Galeri Gambar</h2>
+        <div class="image-scroll">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+            <img src="image4.jpg" alt="Image 4">
+        </div>
+    </section>
+    <section id="comment">
+        <h2>Komentar</h2>
+        <form action="#" method="post">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+            
+            <label for="komentar">Komentar:</label>
+            <textarea id="komentar" name="komentar" rows="4" required></textarea>
+            
+            <button type="submit">Kirim Komentar</button>
+        </form>
+    </section>
+    
+
+    <section id="contact">
+        <h2>Hubungi Kami</h2>
+        <p>Jika Anda ingin berkontribusi atau mendukung inisiatif kami, silakan hubungi kami di alamat email berikut: <a href="mailto:info@lingkunganbersih.org">info@lingkunganbersih.org</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tema Lingkungan</p>
+    </footer>
+    <script>
+        function generateCalendar() {
+            const calendarBody = document.querySelector("#calendar tbody");
+            calendarBody.innerHTML = ""; 
+            const currentDate = new Date();
+            const currentMonth = currentDate.getMonth();
+            const currentYear = currentDate.getFullYear();
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+            const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
+    
+            let dateCounter = 1;
+    
+            for (let i = 0; i < 6; i++) {
+                const row = document.createElement("tr");
+                for (let j = 0; j < 7; j++) {
+                    const cell = document.createElement("td");
+                    if (i === 0 && j < firstDayOfMonth) {
+                        cell.textContent = "";
+                    } else if (dateCounter <= daysInMonth) {
+                        cell.textContent = dateCounter;
+                        dateCounter++;
+                    }
+                    row.appendChild(cell);
+                }
+                calendarBody.appendChild(row);
+            }
+        }
+        window.onload = generateCalendar;
+    </script>
+    
+</body>
 </html>
